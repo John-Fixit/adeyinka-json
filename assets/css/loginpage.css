@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(slateblue, rgb(186, 179, 231), rgba(42, 19, 186, 0.428));
+}
+
+.main-cont {
+    background-color: whitesmoke;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    border-style: ridge;
+    position: relative;
+    top: 50px;
+}
+
+legend {
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: black;
+    font-size: large;
+}
+
+legend .dell {
+    font-family: sans-serif;
+    color: slateblue;
+    font-size: large;
+}
+
+.first-cont {
+    margin-top: 60px;
+    color: rgb(46, 44, 44);
+}
+
+.first-cont label {
+    position: relative;
+    right: 80px;
+}
+
+.first-cont input {
+    width: 300px;
+    height: 20px;
+    border: none;
+}
+
+.kim {
+    background-color: slateblue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 250px;
+    height: 35px;
+    margin-top: 100px;
+}
+
+.kil {
+    position: relative;
+    font-family: monospace;
+    font-size: small;
+    color: black;
+    left: 120px;
+    border: none;
+}
+
+.second-cont {
+    position: relative;
+    bottom: 40px;
+    right: 30px;
+    color: rgb(126, 121, 121);
+}
+
+.second-cont span {
+    position: relative;
+    bottom: 40px;
+    left: 100px;
+    top: 1px;
+    color: rgb(49, 47, 47);
+}
+
+.second-cont img {
+    position: relative;
+    top: 50px;
+    right: 80px;
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.yo {
+    background-color: slateblue;
+}
+
+.yy .yoo {
+    color: rgb(186, 179, 231);
+    position: relative;
+    left: 40px;
+    font-size: x-large;
+    bottom: 30px;
+}
+
+.yy .yooo {
+    color: rgb(77, 61, 214);
+    font-size: large;
+}
+
+.go {
+    color: white;
+}

@@ -1,0 +1,101 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(rgb(186, 179, 231), slateblue);
+}
+
+.main-cont {
+    background-image: linear-gradient(slateblue, rgb(186, 179, 231));
+    width: 500px;
+    height: 650px;
+    border-radius: 20px;
+    border-style: groove;
+    position: relative;
+    top: 50px;
+}
+
+.main-cont h1 {
+    font-family: monospace;
+    font-size: small;
+    color: slateblue;
+}
+
+.main-cont h1 span {
+    font-family: monospace;
+    font-size: small;
+    color: black;
+}
+
+legend {
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: rgb(205, 90, 199);
+    font-size: large;
+}
+
+legend .lau {
+    font-family: sans-serif;
+    color: rgb(186, 179, 231);
+    font-size: large;
+}
+
+.first-cont {
+    margin-top: 60px;
+    color: rgb(186, 179, 231);
+}
+
+.first-cont .second-cont label {
+    margin-top: 60px;
+    color: rgb(153, 90, 205);
+    position: relative;
+    right: 150px;
+}
+
+.first-cont .second-cont input {
+    border: none;
+    width: 00px;
+}
+
+.first-cont .third-cont {
+    position: relative;
+    right: 5px;
+}
+
+.first-cont .second-cont h2 {
+    font-family: serif;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.bbb {
+    background-color: slateblue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 25px;
+    margin-top: 30px;
+}
+
+.bim {
+    color: black;
+    font-family: monospace;
+    font-size: small;
+    border: none;
+    /* background-image: url(images/Image2_2022-03-30_at_3.21.13_PM-removebg-preview\ \(2\).png); */
+    /* background-size: cover; */
+    background-color: rgb(125, 114, 199);
+    /* background-color: none; */
+}
+
+.custom-control {
+    position: relative;
+    right: 20px;
+    color: slateblue;
+    top: 5px;
+    font-family: monospace;
+    font-size: small;
+}

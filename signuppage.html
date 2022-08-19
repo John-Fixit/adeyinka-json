@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ynak Bank</title>
+    <link rel="stylesheet" href="assets/css/signuppage.css">
+    <link rel="icon" href="assets/imagess/Image2_2022-03-30_at_3.21.13_PM-removebg-preview (2).png" type="image/x-icon">
+</head>
+<script>
+    let details = [];
+    let Balance = 10000;
+    let number = [2, 4, 3, 6, 5, 7, 9, 8];
+    let accountnumber = Math.floor("30" + Math.random(number.length) * 100000000);
+
+    function submit() {
+        firstname = Fn.value;
+        middlename = Mn.value;
+        lastname = Ln.value;
+        emailaddress = En.value;
+        phonenumber = Pn.value;
+        password = As.value;
+        dateofbirth = Dn.value;
+        customCheck1 = cc.value;
+        obj = {
+
+            firstname,
+            middlename,
+            lastname,
+            emailaddress,
+            password,
+            phonenumber,
+            dateofbirth,
+            accountnumber,
+            Balance,
+            customCheck1,
+            myHistory: []
+
+        };
+
+        if (firstname.length <= 0 && middlename.length <= 0 && lastname.length <= 0 && emailaddress.length <= 0 && password.length <= 0 && phonenumber.length <= 0 && dateofbirth.length <= 0 && customCheck1.length <= 0) {
+            alert("fill in the signup page");
+        } else if (firstname) {
+            if (localStorage.allDetails != null) {
+                details = JSON.parse(localStorage.getItem("allDetails"));
+            }
+
+
+            details.push(obj);
+            ddd = JSON.stringify(details);
+            localStorage.setItem('allDetails', ddd);
+            location.href = "loginpage.html";
+        }
+
+    }
+
+    function siGnin() {
+        location.href = "loginpage.html";
+    }
+</script>
+
+<body>
+    <center>
+        <div class="main-cont">
+            <legend align="Center"><b>Sign <b class="lau">Up</b> Page</b>
+            </legend>
+            <!-- <div><input id="uuu" type="Invalid/Signup to Have your details with us, Thank you."></div> -->
+            <div class="first-cont">
+                <div id="second-cont">
+                    <label for="firstname">First name</label> <br>
+                    <input id="Fn" type="text" required maxlength="20"> <br> <br>
+                    <label for="middlename">Middle name</label> <br>
+                    <input id="Mn" type="text" required maxlength="20"> <br> <br>
+                    <label for="lastname">Last name</label> <br>
+                    <input id="Ln" type="text" value="" minlength="4"> <br> <br>
+                    <label for="emailaddress">Email address</label> <br>
+                    <input id="En" type="text" placeholder="abc@gmail.com"> <br> <br>
+                    <label for="password">Password</label> <br>
+                    <input id="As" type="text" required maxlength="20"> <br> <br>
+                    <label for="phonenumber">Phone number</label> <br>
+                    <input id="Pn" type="Number" minlength="11"> <br> <br>
+                    <label for="dateofbirth">Date Of birth</label> <br>
+                    <input id="Dn" type="date"> <br> <br>
+                </div>
+                <div class="third-cont">
+                    <input type="radio" name="gender:">
+                    <label for="male">Male</label>
+                    <input id="gender" type="radio" name="gender:">
+                    <label for="female">Female</label> <br> <br>
+                </div>
+                <div class="custom-control custom-checkbox text-left mb-4 mt-2" style="color: slateblue;">
+                    <input type="checkbox" class="custom-control-input" id="cc">
+                    <label class="custom-control-label" for="customCheck1"> Agree with the terms and condition</label>
+                </div>
+                <button class="bbb" onclick="submit()">Submit</button>
+            </div> <br>
+            <h1>Already have an account/<button class="bim" onclick="siGnin()">Sign In</button></h1>
+        </div>
+    </center>
+</body>
+
+</html>

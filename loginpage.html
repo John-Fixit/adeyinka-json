@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ynak Bank</title>
+    <link rel="stylesheet" href="assets/css/loginpage.css">
+    <link rel="icon" href="assets/imagess/Image2_2022-03-30_at_3.21.13_PM-removebg-preview (2).png" type="image/x-icon">
+</head>
+<script>
+    let details = JSON.parse(localStorage.allDetails);
+
+
+
+    function signin() {
+
+        let found = details.find((val) => val.emailaddress == userName.value && val.password == passWord.value)
+        console.log(found);
+
+        if (!found) {
+            alert("User does not exist")
+        } else {
+            localStorage.setItem("currentUser", JSON.stringify(found))
+            let currentIndex = details.indexOf(found)
+            console.log(currentIndex);
+            localStorage.setItem("currentIndex", JSON.stringify(currentIndex))
+            location.href = "landingpagee.html";
+
+        }
+    }
+</script>
+
+<body>
+    <center>
+        <div class="main-cont">
+            <legend align="Center"><b>Log<b class="dell">in</b></b>
+            </legend>
+            <div class="first-cont">
+                <label for="UserName">EmailAddress</label> <br> <br>
+                <input id="userName" placeholder="" type="username"> <br> <br> <br> <br>
+                <label for="Password">Password</label> <br> <br>
+                <input id="passWord" placeholder="" type="password"> <br> <br> <br>
+                <button class="kil">Forget Password?</button>
+            </div>
+            <button class="kim btn-block mb-4" onclick="signin()">LOGIN</button>
+        </div>
+        <div class="second-cont">Read more about us <span>contact us on?</span>
+            <!-- <img src="images/Logo.png" alt="" width="50px" height="20px"> -->
+        </div>
+    </center>
+</body>
+
+</html>
